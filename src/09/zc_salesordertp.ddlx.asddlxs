@@ -1,0 +1,103 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo.typeName: 'Sales Order'
+
+@UI.headerInfo.typeNamePlural: 'Sales Orders'
+
+@UI.headerInfo.title.label: 'Sales Order'
+
+@UI.headerInfo.title.value: 'SalesOrder'
+
+annotate view ZC_SalesOrderTP with
+
+{
+
+  @UI.identification: [{position: 10, importance: #HIGH},{type:#FOR_ACTION, position: 0, dataAction: 'BOPF:DELETE', label: 'Delete' }]
+
+  @UI.lineItem: [{position: 10, importance: #HIGH}]
+
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 10, importance: #HIGH }]
+
+  @UI.selectionField: [{position: 10}]
+
+  SalesOrder;
+
+  @UI.identification: [{position: 20, importance: #HIGH}]
+
+  @UI.lineItem: [{position: 20, importance: #HIGH}]
+
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 20, importance: #HIGH }]
+
+  @UI.selectionField: [{position: 20}]
+
+  SalesOrderType;
+
+  @UI.identification: [{position: 20, importance: #HIGH}]
+
+  @UI.lineItem: [{position: 20, importance: #HIGH}]
+
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 30, importance: #HIGH }]
+
+  @UI.selectionField: [{position: 20}]
+
+  SalesOrganization;
+
+  @UI.identification: [{position: 30, importance: #HIGH}]
+
+  @UI.lineItem: [{position: 30, importance: #HIGH}]
+
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 40, importance: #HIGH }]
+
+  @UI.selectionField: [{position: 30}]
+
+  DistributionChannel;
+
+  @UI.identification: [{position: 40, importance: #HIGH}]
+
+  @UI.lineItem: [{position: 40, importance: #HIGH}]
+
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 50, importance: #HIGH }]
+
+  @UI.selectionField: [{position: 40}]
+
+  OrganizationDivision;
+
+  @UI.identification: [{position: 50, importance: #HIGH}]
+
+  @UI.lineItem: [{position: 50, importance: #HIGH}]
+
+  @UI.selectionField: [{position: 50}]
+
+  DeliveryStatus;
+
+  @UI.identification: [{position: 60, importance: #LOW}]
+
+  @UI.lineItem: [{position: 60, importance: #LOW}]
+
+  DeletionIndicator;
+
+  @UI.identification: [{position: 70, importance: #LOW }]
+
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 10, importance: #LOW }]
+
+  CreatedByUser;
+
+  @UI.identification: [{position: 80, importance: #LOW}]
+
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 20, importance: #LOW }]
+
+  CreationDateTime;
+
+  @UI.identification: [{position: 90, importance: #LOW}]
+
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 30, importance: #LOW }]
+
+  LastChangedByUser;
+
+  @UI.identification: [{position: 100, importance: #LOW}]
+
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 40, importance: #LOW }]
+
+  LastChangeDateTime;
+
+}
